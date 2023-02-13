@@ -13,6 +13,11 @@ export default async function handler(req, res){
       title: title,
       body: body,
     },
+    android: {
+      notification: {
+        imageUrl: image
+      }
+    },
     tokens: tokens
   };
 
