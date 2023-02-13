@@ -1,9 +1,11 @@
 import { db } from "../config/firebase"
 import { collection, addDoc, doc, updateDoc, deleteDoc, query, onSnapshot, getDocs } from "firebase/firestore"
+import { enviarNotificacao } from "./notificacao"
 
 export async function salvarPost(data){
   try {
     const result = await addDoc(collection(db, 'posts'), data)
+    await enviarNotificacao(data.titulo, data.descricao, data.imagemUrl)
     return result.id
   } catch(error){
     console.log('Erro add post:', error)
