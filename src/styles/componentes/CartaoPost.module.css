@@ -1,0 +1,53 @@
+.cartaoPostContainer {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: gray;
+  box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.22);
+  elevation: 5;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.cartaoPostContainer:hover {
+  box-shadow: 2px 2px 10px 2px rgba(155, 155, 155, 0.5);
+  elevation: 10;
+  transform: translateY(-5px);
+}
+
+.cartaoPostImagem {
+  width: 100%;
+  height: 220px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #d9d9d9;
+}
+
+.cartaoPostTextoContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 80px;
+  background-color: #041833;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.cartaoPostTitulo {
+  color: #d9d9d9;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.cartaoPostFonte {
+  color: #d9d9d9;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 10px;
+}

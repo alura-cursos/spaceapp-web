@@ -1,0 +1,22 @@
+{
+  "name": "spaceapp-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.1",
+    "eslint": "8.31.0",
+    "eslint-config-next": "13.1.1",
+    "firebase": "^9.15.0",
+    "firebase-admin": "^11.4.1",
+    "next": "13.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sweetalert2": "^11.6.16"
+  }
+}
