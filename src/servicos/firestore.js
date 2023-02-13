@@ -13,6 +13,21 @@ export async function salvarPost(data){
   }
 }
 
+export async function pegarTokens(){
+  try {
+    const tokensRef = query(collection(db, "tokens"))
+    const querySnapshot = await getDocs(tokensRef)
+    const tokens = []
+    querySnapshot.forEach((doc) => {
+      tokens.push(doc.data().token)
+    })
+    return tokens
+  }
+  catch(error){
+    console.log(error)
+  }
+}
+
 export async function pegarPostsTempoReal(setposts){
   const ref = query(collection(db, "posts"))
   onSnapshot(ref, (querySnapshot) => {

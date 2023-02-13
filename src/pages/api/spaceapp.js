@@ -1,15 +1,19 @@
 import { admin } from '../../config/firebaseAdmin';
+import { pegarTokens } from '../../servicos/firestore';
 
 export default async function handler(req, res){
 
   const { title, body, image } = req.body
+
+  const tokens = await pegarTokens()
+  console.log(tokens)
 
   const mensagem = {
     notification: {
       title: title,
       body: body,
     },
-    tokens: ['fymAfwTZRMyfanSMZ_hRPx:APA91bGfQi_x-VFhAOO0Ly8BjJznceBpmCZUg7a65d3-iDTY8PDUfjlumpU6jV_gAZH50VrLxGWG-DN__1sbT-O5vH3F56SuroWPVsZW73M3rb4M94WOvePQq0arqKdc9AbQLnDgNWwN']
+    tokens: tokens
   };
 
   try {
